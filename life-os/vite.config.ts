@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/life-os/',
+  base: '/bmad-test/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

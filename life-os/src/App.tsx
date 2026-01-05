@@ -16,7 +16,7 @@ function SPARedirectHandler() {
     if (redirect) {
       sessionStorage.removeItem('spa-redirect');
       // Remove the base path prefix if present
-      const basePath = '/life-os';
+      const basePath = '/bmad-test';
       const path = redirect.startsWith(basePath)
         ? redirect.slice(basePath.length)
         : redirect;
@@ -32,7 +32,7 @@ function SPARedirectHandler() {
 
 export function App() {
   return (
-    <BrowserRouter basename="/life-os">
+    <BrowserRouter basename="/bmad-test">
       <SPARedirectHandler />
       <Routes>
         <Route path="/" element={<Dashboard />} />
