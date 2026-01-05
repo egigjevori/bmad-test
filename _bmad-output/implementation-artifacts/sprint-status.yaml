@@ -1,0 +1,92 @@
+# generated: 2025-12-29
+# project: Life OS
+# project_key: life-os
+# tracking_system: file-system
+# story_location: _bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2025-12-29
+project: Life OS
+project_key: life-os
+tracking_system: file-system
+story_location: _bmad-output/implementation-artifacts
+
+development_status:
+  # Epic 1: Foundation & Dashboard Shell (6 stories)
+  epic-1: done
+  1-1-project-initialization: done
+  1-2-core-infrastructure-setup: done
+  1-3-widget-grid-implementation: done
+  1-4-layout-persistence: done
+  1-5-widget-registry-system: done
+  1-6-theme-system-foundation: done
+  epic-1-retrospective: optional
+
+  # Epic 2: Habit Tracking (5 stories)
+  epic-2: done
+  2-1-habit-widget-structure: done
+  2-2-habit-crud-operations: done
+  2-3-daily-habit-completion: done
+  2-4-streak-tracking: done
+  2-5-habit-widget-summary-for-bottom-bar: done
+  epic-2-retrospective: optional
+
+  # Epic 3: Mood Tracking (4 stories)
+  epic-3: done
+  3-1-mood-widget-and-basic-logging: done
+  3-2-multiple-check-ins-and-tags: done
+  3-3-mood-trend-visualization: done
+  3-4-mood-widget-summary-for-bottom-bar: done
+  epic-3-retrospective: optional
+
+  # Epic 4: Quick Notes (4 stories)
+  epic-4: done
+  4-1-quick-note-capture: done
+  4-2-note-types-and-tags: done
+  4-3-pin-and-archive-notes: done
+  4-4-notes-widget-summary-for-bottom-bar: done
+  epic-4-retrospective: optional
+
+  # Epic 5: Bottom Bar "Heartbeat" (4 stories)
+  epic-5: done
+  5-1-bottom-bar-shell-and-calendar-strip: done
+  5-2-day-color-coding-and-today-highlight: done
+  5-3-day-summary-popup: done
+  5-4-day-view-page: done
+  epic-5-retrospective: optional
+
+  # Epic 6: Settings & Deployment (3 stories - keyboard shortcuts removed)
+  epic-6: done
+  6-1-theme-toggle: done
+  6-2-widget-management: done
+  6-3-keyboard-shortcuts: skipped
+  6-4-github-pages-deployment: done
+  epic-6-retrospective: optional

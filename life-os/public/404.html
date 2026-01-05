@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Life OS</title>
+    <script>
+      // SPA redirect for GitHub Pages
+      // Preserves the path so React Router can handle it
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+      // Store the full path in sessionStorage
+      sessionStorage.setItem('spa-redirect', path + search + hash);
+      // Redirect to the base path
+      window.location.replace('/life-os/');
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
