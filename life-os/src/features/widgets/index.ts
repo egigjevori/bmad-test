@@ -6,3 +6,4 @@ export * from './registry';
 export { HabitWidget } from './habits';
 export { MoodWidget } from './mood';
 export { NotesWidget } from './notes';
+export { PomodoroWidget } from './pomodoro';

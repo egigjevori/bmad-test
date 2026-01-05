@@ -36,6 +36,12 @@
   --color-warning: oklch(0.70 0.15 75);
   --color-error: oklch(0.55 0.2 25);
 
+  /* Pomodoro Colors */
+  --color-pomodoro: oklch(0.60 0.20 25);
+  --color-pomodoro-work: oklch(0.60 0.20 25);
+  --color-pomodoro-break: oklch(0.65 0.15 170);
+  --color-pomodoro-long-break: oklch(0.60 0.15 280);
+
   /* Spacing */
   --spacing-widget-gap: 16px;
   --spacing-widget-padding: 16px;

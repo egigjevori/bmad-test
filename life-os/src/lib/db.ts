@@ -3,6 +3,7 @@ import Dexie, { type EntityTable } from 'dexie';
 import type { Habit, HabitCompletion } from '@/features/widgets/habits/types';
 import type { MoodEntry } from '@/features/widgets/mood/types';
 import type { Note } from '@/features/widgets/notes/types';
+import type { PomodoroSession } from '@/features/widgets/pomodoro/types';
 
 /**
  * Base interface for all widget data entries
@@ -23,15 +24,17 @@ class LifeOSDatabase extends Dexie {
   habitCompletions!: EntityTable<HabitCompletion, 'id'>;
   moods!: EntityTable<MoodEntry, 'id'>;
   notes!: EntityTable<Note, 'id'>;
+  pomodoroSessions!: EntityTable<PomodoroSession, 'id'>;
 
   constructor() {
     super('life-os');
 
-    this.version(2).stores({
+    this.version(3).stores({
       habits: '++id, name, archived, createdAt',
       habitCompletions: '++id, habitId, date, [habitId+date]',
       moods: '++id, date, mood, createdAt',
       notes: '++id, date, type, pinned, archived, createdAt',
+      pomodoroSessions: '++id, date, type, completedAt',
     });
   }
 }

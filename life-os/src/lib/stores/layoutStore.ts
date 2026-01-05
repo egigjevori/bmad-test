@@ -25,17 +25,20 @@ const DEFAULT_LAYOUTS: Record<string, LayoutItem[]> = {
   lg: [
     { i: 'habits', x: 0, y: 0, w: 4, h: 4, minW: 2, minH: 2 },
     { i: 'mood', x: 4, y: 0, w: 4, h: 2, minW: 2, minH: 2 },
+    { i: 'pomodoro', x: 4, y: 2, w: 2, h: 3, minW: 2, minH: 3 },
     { i: 'notes', x: 8, y: 0, w: 4, h: 4, minW: 2, minH: 2 },
   ],
   md: [
     { i: 'habits', x: 0, y: 0, w: 6, h: 4, minW: 2, minH: 2 },
     { i: 'mood', x: 6, y: 0, w: 6, h: 2, minW: 2, minH: 2 },
+    { i: 'pomodoro', x: 6, y: 2, w: 3, h: 3, minW: 2, minH: 3 },
     { i: 'notes', x: 0, y: 4, w: 12, h: 4, minW: 2, minH: 2 },
   ],
   sm: [
     { i: 'habits', x: 0, y: 0, w: 6, h: 4, minW: 2, minH: 2 },
     { i: 'mood', x: 0, y: 4, w: 6, h: 2, minW: 2, minH: 2 },
-    { i: 'notes', x: 0, y: 6, w: 6, h: 4, minW: 2, minH: 2 },
+    { i: 'pomodoro', x: 0, y: 6, w: 6, h: 3, minW: 2, minH: 3 },
+    { i: 'notes', x: 0, y: 9, w: 6, h: 4, minW: 2, minH: 2 },
   ],
 };
 
@@ -90,7 +93,7 @@ export const useLayoutStore = create<LayoutState>()(
   persist(
     (set, get) => ({
       layouts: DEFAULT_LAYOUTS,
-      enabledWidgets: ['habits', 'mood', 'notes'],
+      enabledWidgets: ['habits', 'mood', 'notes', 'pomodoro'],
 
       setLayouts: (breakpoint, layout) =>
         set((state) => ({
@@ -124,7 +127,7 @@ export const useLayoutStore = create<LayoutState>()(
       resetLayouts: () =>
         set({
           layouts: DEFAULT_LAYOUTS,
-          enabledWidgets: ['habits', 'mood', 'notes'],
+          enabledWidgets: ['habits', 'mood', 'notes', 'pomodoro'],
         }),
 
       isWidgetEnabled: (widgetId) => get().enabledWidgets.includes(widgetId),

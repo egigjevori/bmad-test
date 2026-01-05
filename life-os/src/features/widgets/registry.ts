@@ -68,4 +68,5 @@ export async function initializeWidgets(): Promise<void> {
   await import('./habits');
   await import('./mood');
   await import('./notes');
+  await import('./pomodoro');
 }
