@@ -66,6 +66,7 @@ export async function initializeWidgets(): Promise<void> {
   // Import all widget modules to trigger registration
   // Each widget module calls registerWidget() on import
   await import('./habits');
+  await import('./journal');
   await import('./mood');
   await import('./notes');
   await import('./pomodoro');

@@ -6,7 +6,8 @@ import type { Habit, HabitCompletion, CompletionStatus } from './types';
  * Get all active (non-archived) habits
  */
 export async function getHabits(): Promise<Habit[]> {
-  return db.habits.where('archived').equals(0).toArray();
+  const allHabits = await db.habits.toArray();
+  return allHabits.filter((habit) => !habit.archived);
 }
 
 /**

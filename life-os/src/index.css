@@ -42,6 +42,9 @@
   --color-pomodoro-break: oklch(0.65 0.15 170);
   --color-pomodoro-long-break: oklch(0.60 0.15 280);
 
+  /* Journal Colors */
+  --color-journal: oklch(0.60 0.15 75);
+
   /* Spacing */
   --spacing-widget-gap: 16px;
   --spacing-widget-padding: 16px;

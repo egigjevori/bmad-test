@@ -1,6 +1,7 @@
 import Dexie, { type EntityTable } from 'dexie';
 
 import type { Habit, HabitCompletion } from '@/features/widgets/habits/types';
+import type { JournalEntry } from '@/features/widgets/journal/types';
 import type { MoodEntry } from '@/features/widgets/mood/types';
 import type { Note } from '@/features/widgets/notes/types';
 import type { PomodoroSession } from '@/features/widgets/pomodoro/types';
@@ -22,6 +23,7 @@ export interface BaseEntry {
 class LifeOSDatabase extends Dexie {
   habits!: EntityTable<Habit, 'id'>;
   habitCompletions!: EntityTable<HabitCompletion, 'id'>;
+  journalEntries!: EntityTable<JournalEntry, 'id'>;
   moods!: EntityTable<MoodEntry, 'id'>;
   notes!: EntityTable<Note, 'id'>;
   pomodoroSessions!: EntityTable<PomodoroSession, 'id'>;
@@ -29,9 +31,10 @@ class LifeOSDatabase extends Dexie {
   constructor() {
     super('life-os');
 
-    this.version(3).stores({
+    this.version(4).stores({
       habits: '++id, name, archived, createdAt',
       habitCompletions: '++id, habitId, date, [habitId+date]',
+      journalEntries: '++id, date, createdAt',
       moods: '++id, date, mood, createdAt',
       notes: '++id, date, type, pinned, archived, createdAt',
       pomodoroSessions: '++id, date, type, completedAt',
